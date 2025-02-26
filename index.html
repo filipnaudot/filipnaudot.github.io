@@ -2,66 +2,108 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Filip Naudot - Work in Progress</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Filip Naudot</title>
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
     <style>
-        /* Retro Styling */
         body {
-            background-color: #222222;
-            color: #00ff99;
-            font-family: 'Courier New', Courier, monospace;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
-            margin: 0;
-            overflow-x: hidden;
+            font-family: 'Open Sans', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+            line-height: 1.6;
         }
-
-        .container {
-            border: 3px solid #00ff99;
-            padding: 20px;
-            background-color: #111111;
-            box-shadow: 0px 0px 20px rgba(0, 255, 153, 0.5);
+        .hero {
+            background: #fff;
+            padding: 60px 20px;
             text-align: center;
+            margin-bottom: 30px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
         }
-
-        h1 {
-            font-size: 2.5rem;
-            color: #00ff99;
-        }
-
-        p {
-            font-size: 1.2rem;
-            color: #00ff99;
-        }
-
-        .cursor {
+        .section-title {
+            border-bottom: 2px solid #333;
             display: inline-block;
-            width: 10px;
-            height: 1em;
-            background-color: #00ff99;
-            margin-left: 5px;
-            animation: blink 1s infinite;
+            padding-bottom: 5px;
+            margin-bottom: 20px;
         }
-
-        @keyframes blink {
-            0%, 100% { opacity: 1; }
-            50% { opacity: 0; }
+        .content-section {
+            padding: 30px 0;
+        }
+        a {
+            color: #007bff;
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+        /* Extra side margins on desktop screens */
+        @media (min-width: 992px) {
+        .container {
+            padding-left: 15rem;
+            padding-right: 15rem;
+        }
+        }
+        @media (max-width: 991.98px) {
+        .container {
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
         }
     </style>
 </head>
 <body>
-    <div class="container col-12 col-md-6 col-lg-4">
-        <h1>Filip Naudot</h1>
-        <p>This site is a work in progress<span class="cursor"></span></p>
-    </div>
+  <!-- Header / Hero Section -->
+  <header class="hero">
+    <h1 class="display-4">Filip Naudot</h1>
+    <!-- <p class="lead"> </p> -->
+  </header>
 
-    <!-- Bootstrap JS Bundle with Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="container">
+    <!-- Links Section -->
+    <section id="links" class="content-section">
+        <h2 class="section-title">Links</h2>
+        <ul class="list-unstyled">
+            <li><a href="https://github.com/filipnaudot" target="_blank">GitHub</a></li>
+            <li><a href="https://linkedin.com/in/filip-naudot" target="_blank">LinkedIn</a></li>
+        </ul>
+    </section>
+
+    <!-- Open Source Contributions Section -->
+    <section id="opensource" class="content-section">
+        <h2 class="section-title">Open Source Contributions</h2>
+        <div class="mb-4">
+            <h3>Quantitative-Bipolar-Argumentation</h3>
+            <p>Contributor. Modification to handle sets of contributors, enabling the quantification of multiple arguments collectively contributing to a topic argument.</p>
+            <p><a href="https://github.com/TimKam/Quantitative-Bipolar-Argumentation" target="_blank">View on GitHub</a></p>
+        </div>
+        <div class="mb-4">
+            <h3>lightbench</h3>
+            <p>Maintainer. Developed and currently maintaining the LLM benchmarking framework lightbench, which enables automatic evaluation for code and text generation tasks.</p>
+            <p><a href="https://github.com/filipnaudot/lightbench" target="_blank">View on GitHub</a></p>
+        </div>
+    </section>
+
+    <!-- Publications Section -->
+    <section id="publications" class="content-section">
+        <h2 class="section-title">Publications</h2>
+        <div class="mb-4">
+            <h3>Performance and Computational Demands of LLMs: Impact of Model Size and Quantization</h3>
+            <p><strong>Naudot, Filip. (2025).</strong> In <em>Proceedings of Umeå’s 28th Student Conference in Computing Science (USCCS 2025)</em>, edited by Thomas Hellström, Umeå University, Sweden.</p>
+        </div>
+    </section>
+
+    <!-- Awards & Achievements Section -->
+    <section id="awards" class="content-section">
+        <h2 class="section-title">Awards & Achievements</h2>
+        <div class="mb-4">
+            <h3>Winner – Reinforcement Learning Tournament</h3>
+            <p>Artificial Intelligence - Methods and Applications (Ht24), Umeå University, 2024.</p>
+        </div>
+    </section>
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
